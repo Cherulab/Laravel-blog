@@ -18,9 +18,7 @@ class RegistrationController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        
         $users = User::create(request(['name', 'email', 'password']));
-
         auth()->login($users);
         return redirect()->to('/');
     }
