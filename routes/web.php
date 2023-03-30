@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/user/{id}', function (Request $request) {
     return View('userPage');
 });
+
+Route::get('/register', function (Request $request) {
+    return View('registerPage');
+});
