@@ -18,8 +18,12 @@ class RegistrationController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
+        // if (User::where('email', $this )->exists()) {
+        //     print('Not Good');
+        //     return redirect()->to('/');
+        // }
         $users = User::create(request(['name', 'email', 'password']));
         auth()->login($users);
-        return redirect()->to('/');
+        return redirect()->to('/home')->with('success', 'User add Succes.');
     }
 }

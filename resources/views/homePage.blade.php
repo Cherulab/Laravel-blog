@@ -15,8 +15,8 @@
             <a class="nav-link" href="/logout">Log Out</a>
         </li>
         @else
-    <h1>Error</h1>
-    <button><a href="/">Return Login</a></button>
+    <h1>Welcome Free count</h1>
+    <button><a href="/register">Create an account</a></button>
         @endif
     </body>
 </html>
